@@ -1,6 +1,7 @@
 import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer"
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { useCreateSubscriberMutation } from "../hraphql/generated";
@@ -30,9 +31,10 @@ export function Subscribe() {
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <Header />
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+      <div className="w-full max-w-[1100px] flex items-center justify-between mt-3 mx-auto">
         <div className="max-w-640px" >
-          <h1 className="mt-8 text-[2.5rem] leading-tight ">Construa uma <strong className="text-blue-500"> aplicação completa</strong>, do zero, com <strong className="text-blue-500"> React JS</strong></h1>
+          <img src="/src/assets/ubiiLogo.svg" alt="" />
+          <h1 className="mt-1 text-[2.5rem] leading-tight ">Construa uma <strong className="text-blue-500"> aplicação completa</strong>, <br></br>do zero, com <strong className="text-blue-500"> React JS</strong></h1>
           <p className="mt-4 text-gray-200 leading-relaxed"> Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas <br></br>e com alta demanda para acessar as melhores oportunidades do mercado. </p>
         </div>
         <div className="p-8 bg-gray-700 border gray-500 rounded" >
@@ -60,8 +62,8 @@ export function Subscribe() {
           </form>
         </div>
       </div>
-
       <img src="/src/assets/mockup.png" alt="" />
+      <Footer />
     </div>
   );
 }
